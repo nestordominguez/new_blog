@@ -11,7 +11,17 @@ angular.module('myApp', [
   'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/index', {templateUrl: 'partials/post/index.html', controller: 'PostsIndexController'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/index'});
+  $routeProvider.when('/posts', {
+    templateUrl: 'partials/post/index.html',
+    controller: 'PostsIndexController'
+  });
+  $routeProvider.when('/posts/show/:postId', {
+    templateUrl: 'partials/post/show.html',
+    controller: 'PostShowController'
+  });
+  $routeProvider.when('/posts/create', {
+    templateUrl: 'partials/post/create.html',
+    controller: 'PostCreateController'
+  });
+  $routeProvider.otherwise({redirectTo: '/posts'});
 }]);

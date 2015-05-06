@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Post detail</h1>
+
+    <form>
+        <div>
+            <label>Comment:</label>
+            <div >
+                <input ng-model="post.comment"/>
+            </div>
+        </div>
+        <div>
+            <div>
+              <!-- user-detail.html: -->
+                <button ng-click="cancel()">cancel</button>
+
+              <!-- user-creation.html: -->
+                <button ng-click="createNewPost(post)">create new post</button>
+            </div>
+        </div>
+    </form>
+</div>
